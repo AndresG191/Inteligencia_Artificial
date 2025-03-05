@@ -2,6 +2,7 @@ import random
 import math
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 file_Made = True #archivo creado variable
 
@@ -65,6 +66,9 @@ for columna in ['velocidad_Internet', 'velocidad_Descarga', 'calidad_Servicio', 
     print(f"Variable: {columna}")
     print(tabla_resultados)
     print("-" * 50)
+
+plt.scatter(df['velocidad_Internet'], df['velocidad_Descarga'])
+plt.show()
 
 #Guarda las divisiones del dataset en archivo .csv
 entrenamiento.to_csv('velocidad_Internet_70.csv', index = False)
